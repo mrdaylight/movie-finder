@@ -8,7 +8,7 @@ import {OmdbApiService} from './services/omdb-api.service';
   providers: [OmdbApiService]
 })
 export class AppComponent {
-	movieData:IOMDBResponse;
+	movieData:IOMDBresponse;
 	errorMessage:any;
 
 	constructor(private _omdbService:OmdbApiService) {}
