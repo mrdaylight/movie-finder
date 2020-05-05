@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {OmdbApiService} from './services/omdb-api.service';
+import {OmdbApiService}from './services/omdb-api.service';
 
 @Component({
   selector: 'app-root',
@@ -8,21 +8,18 @@ import {OmdbApiService} from './services/omdb-api.service';
   providers: [OmdbApiService]
 })
 export class AppComponent {
-	movieData:IOMDBresponse;
-	errorMessage:any;
+  movieData:IOMDBresponse;
+errorMessage:any;
+constructor(private _omdbService:OmdbApiService){
 
-	constructor(private _omdbService:OmdbApiService) {}
-
-	getMovieDetails(movieName:string) : boolean {
-		this._omdbService.getMovieData(movieName).subscribe(
-			movieData => {
-				this.movieData = movieData;
-				console.log('Director name:' + this.movieData.Director);
-			},
-			error => this.errorMessage = <any>error
-		);
-		return false;
-
-	}
-
+}
+getmovieDetails(movieName:string) :boolean{
+  this._omdbService.getMovieData(movieName).subscribe(movieData=>{
+    this.movieData=movieData;
+    console.log('Director name:' + this.movieData.Director);
+  },
+  error => this.errorMessage = <any>error
+  );
+return false;
+}
 }

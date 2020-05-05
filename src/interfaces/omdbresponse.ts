@@ -1,4 +1,4 @@
-interface IOMDBResponse {
+interface IOMDBresponse {
  Title: string;
  Year: string;
  Director: string;
