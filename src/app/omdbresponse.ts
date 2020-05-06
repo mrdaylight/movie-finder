@@ -3,5 +3,5 @@ interface IOMDBResponse{
     Year:string;
     Director:string;
     Poster:string;
-    error:string;
+    Error:string;
 }
