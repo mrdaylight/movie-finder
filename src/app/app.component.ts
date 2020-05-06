@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {OmdbApiService}from './services/omdb-api.service';
+import {OmdbApiService}from './omdb-api.service';
 
 @Component({
   selector: 'app-root',
