@@ -20,4 +20,8 @@ export class OmdbApiService {
 		     catchError(this.handleError)
 	  );
   }
+  private handleError(err:HttpErrorResponse) {
+	  console.log('OmdbApiService: ' + Error);
+	  return Observable.throw(err.message);
+  }
 }
